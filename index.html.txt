@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    font-family: Arial, sans-serif;
+    transition: 0.4s;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #1e1e1e, #000);
+}
+
+.card {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: pop 0.8s ease;
+}
+
+body.dark .card {
+    background: #1f1f1f;
+    color: white;
+}
+
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4facfe;
+}
+
+.tagline {
+    color: #777;
+}
+
+body.dark .tagline {
+    color: #aaa;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #f0f0f0;
+    margin: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+body.dark .skills span {
+    background: #333;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #4facfe;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.dark-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
